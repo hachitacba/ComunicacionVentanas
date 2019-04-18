@@ -4,27 +4,28 @@
  * and open the template in the editor.
  */
 package negocio;
+//import java.util.Comparator;
 
 /**
  *
- * @author Aldo
+ * @author aludba
  */
 public class Paciente implements Comparable<Paciente>{
     private String nombre, apellido;
     private int codigo, edad;
-    double altura,peso;
+    private double altura, peso;
     private static int cod=1;
-
-    public Paciente(String nom, String ape, int ed, double al, double pe) {
-        this.nombre = nom;
-        this.apellido = ape;
-        this.edad = ed;
-        this.altura = al;
-        this.peso = pe;
-        this.codigo=cod;
+    
+    public Paciente(String ape, String nom, int ed, double al, double pe)
+    {
+        codigo = cod;
         cod=cod+1;
-
-    }    
+        apellido = ape;
+        nombre = nom;
+        edad = ed;
+        altura = al;
+        peso = pe;
+    }
 
     public String getNombre() {
         return nombre;
@@ -44,10 +45,6 @@ public class Paciente implements Comparable<Paciente>{
 
     public int getCodigo() {
         return codigo;
-    }
-
-    public void setCodigo(int codigo) {
-        this.codigo = codigo;
     }
 
     public int getEdad() {
@@ -73,29 +70,19 @@ public class Paciente implements Comparable<Paciente>{
     public void setPeso(double peso) {
         this.peso = peso;
     }
-
-    public static int getCod() {
-        return cod;
-    }
-
-    public static void setCod(int cod) {
-        Paciente.cod = cod;
-    }
-
-    @Override
-    public int compareTo(Paciente obj) {
-
+    
+    //Definición del método compareTo()
+    public int compareTo(Paciente obj)
+    {
         return this.apellido.compareTo(obj.apellido);
     }
     
-    public String toString(){
-
-        return "Código: "+codigo+"\nApellido: "+apellido+"\nNombre; "+nombre+
-                "\nEdad: "+edad+"años"+"\nPeso"+peso+"Kgs";
-        
+    public String toString()
+    {
+        return "Código: "+codigo+"  Apellido y nombre: "+apellido+", "
+               +nombre+"\t   Edad: "+edad+"años"+
+               "\t  Altura: "+altura+"mts"+"\t Peso: "+peso+" kg";
     }
-        
-        
-    
+           
     
 }

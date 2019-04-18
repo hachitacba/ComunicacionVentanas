@@ -7,15 +7,12 @@ package negocio;
 import java.util.Comparator;
 /**
  *
- * @author Aldo
+ * @author aludba
  */
 public class ComparacionPorNombre implements Comparator<Paciente>{
-
-    @Override
-    public int compare(Paciente p1, Paciente p2) {
-
+    
+    public int compare(Paciente p1,Paciente p2)
+    {
         return p1.getNombre().compareTo(p2.getNombre());
-        
-    }
-   
+    } 
 }

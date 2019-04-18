@@ -4,10 +4,11 @@
  * and open the template in the editor.
  */
 package negocio;
+import presentacion.VentanaPrincipal;
 
 /**
  *
- * @author Aldo
+ * @author aludba
  */
 public class Principal {
 
@@ -16,6 +17,9 @@ public class Principal {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        GestorPacientes gestor=new GestorPacientes();
+        VentanaPrincipal vp=new VentanaPrincipal(gestor);
+        vp.setVisible(true);
     }
     
 }

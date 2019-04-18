@@ -7,17 +7,17 @@ package negocio;
 import java.util.Comparator;
 /**
  *
- * @author Aldo
+ * @author aludba
  */
 public class ComparacionPorEdad implements Comparator<Paciente>{
-
-    public ComparacionPorEdad() {
+    
+    public ComparacionPorEdad()
+    {
+        
     }
     
-    
-    
-    public int compare (Paciente p1, Paciente p2){
-        
+    public int compare(Paciente p1,Paciente p2)
+    {
         return p1.getEdad()-p2.getEdad();
     }
 }

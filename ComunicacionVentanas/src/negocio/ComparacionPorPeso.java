@@ -7,13 +7,13 @@ package negocio;
 import java.util.Comparator;
 /**
  *
- * @author Aldo
+ * @author aludba
  */
-public class ComparacionPorPeso implements Comparator<Paciente>{
+public class ComparacionPorPeso implements Comparator<Paciente> {
     
-    public int compare(Paciente p1, Paciente p2){
-        
+    public int compare(Paciente p1,Paciente p2)
+    {
         return (int)(p1.getPeso()-p2.getPeso());
     }
-
+    
 }
