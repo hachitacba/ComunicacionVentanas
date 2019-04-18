@@ -40,6 +40,7 @@ public class VentanaListados extends javax.swing.JFrame {
         lblOrdenadosPor = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Ventana de Listados");
         setLocation(new java.awt.Point(500, 100));
         setSize(new java.awt.Dimension(300, 700));
 

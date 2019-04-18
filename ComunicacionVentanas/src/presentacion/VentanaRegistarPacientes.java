@@ -42,6 +42,7 @@ public class VentanaRegistarPacientes extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Alta de Pacientes");
 
         lblNombre.setText("Nombre");
 
