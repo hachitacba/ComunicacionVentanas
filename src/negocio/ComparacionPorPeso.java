@@ -7,13 +7,20 @@ package negocio;
 import java.util.Comparator;
 /**
  *
- * @author aludba
+ * @author Aldo
  */
-public class ComparacionPorPeso implements Comparator<Paciente> {
-    
+public class ComparacionPorPeso implements Comparator<Paciente>{
+        
     public int compare(Paciente p1,Paciente p2)
     {
-        return (int)(p1.getPeso()-p2.getPeso());
+        double dif=p1.getPeso()-p2.getPeso();
+        int res=0;
+        if(dif>0)
+            res=1;
+        else
+            if(dif<0)
+                res=-1;
+        return res;
     }
     
 }
